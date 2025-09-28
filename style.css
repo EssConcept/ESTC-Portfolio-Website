@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+.hero{
+    height: 100vh;
+    position: relative;
+    background-image: url(images/bgESTC6.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 15px;
+    z-index: 1;
+}
+
+.hero nav ul{
+    display: flex;
+    justify-self: center;
+    padding: 1em 3em;
+    gap: 40px;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.050);
+    backdrop-filter: blur(10px);
+    padding-left: 90px;
+    padding-right: 90px;
+    border-radius: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.436);
+    position: fixed; 
+    z-index: 1000;
+    opacity: 0;                          
+    transform: translateY(-100%); 
+    animation: slideDown 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+
+}
+
+.hero nav ul li a{
+    color: rgba(255, 255, 255, 0.811);
+    text-decoration: none;
+    font-family: 'poppins';
+    font-size: 1.3em;
+    
+}
+
+.hero nav ul li a:hover{
+    color: orangered;
+    font-size: 1.2em;
+    transition: ease 0.5s;
+}
+
+.burger {
+  display: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  z-index: 1100;
+}
+
+.description{
+    background-color: black;
+    display: block;
+    padding-bottom: 100px;
+    z-index: 0;
+    border: 0px solid green;
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+    
+}
+
+.keyword{
+    background: linear-gradient(45deg, #ff5c04, #ff2701);
+    color: black;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-weight: 600;
+}
+
+.description p{
+    color:rgba(255, 255, 255, 0.888);
+    font-weight: 400;
+    font-size: 2em;
+    text-align: center;
+    opacity: 0;
+}
+
+.desc-animation1{
+    animation: text-appear 1s forwards;
+    animation-timeline: view();
+    animation-delay: 0s;
+}
+
+.desc-animation2{
+    animation: text-appear 1s forwards;
+    animation-timeline: view();
+    animation-delay: 0.3s;
+}
+
+.desc-animation3{
+    animation: text-appear 1s forwards;
+    animation-timeline: view();
+    animation-delay: 0.6s;
+}
+
+.projects{
+    padding-top:50px;
+    padding-bottom: 90px;
+    background-color: black;
+    display: block;
+    text-align: center;
+    border: 0px solid green;
+}
+
+.projects h1{
+    color: white;
+    font-size: 6em;
+    font-weight: 700;
+    animation: text-appear-projects 1s forwards;
+    animation-timeline: view();
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+.projects p{
+    color: white;
+    font-weight: 400;
+    font-size: 1.5em;
+    animation: text-appear-projects-p 1s forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 60%;
+    opacity: 0;
+}
+
+.github a{
+    padding-top: 50px;
+    text-decoration: none;
+    color: white;
+    animation: text-appear-projects-p 1s forwards;
+}
+
+.github:hover{
+    text-decoration: underline;
+}
+
+.timeline{
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.811);
+    position: fixed;
+    top: 0;
+    animation: fillIn linear;
+    animation-timeline: scroll();
+    z-index: 1000;
+}
+
+.about{
+    padding-top: 20px;
+    background-color: black;
+    display: block;
+    justify-content: center;
+    border: 0px solid green;
+    text-align: center;
+}
+
+.about h1{
+    color: white;
+    font-size: 10em;
+    font-weight: 700;
+    animation: text-appear-about 1s forwards;
+    animation-timeline: view();
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+
+.abme-desc{
+    font-size: 1.5em;
+    padding-right: 30px;
+    padding-left: 50px;
+    text-align: left;
+
+}
+
+.container{
+    position: relative; 
+    max-width: 60%;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.04); 
+    backdrop-filter: blur(5px);          
+    -webkit-backdrop-filter: blur(15px);   
+    border-radius: 20px;                 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); 
+    padding: 2rem;
+    color: white;
+    transform: translateY(-6em);
+    animation: text-appear-container;
+    animation-timeline: view();
+    opacity: 0;
+    overflow: hidden;
+    
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.152), transparent);
+  pointer-events: none; 
+}
+
+.container-wrapper{
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1;
+}
+
+.container-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -150%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(-45deg, transparent 0%,rgba(255, 255, 255, 0.117), transparent 100%);
+  animation: shine 5s linear infinite;
+  pointer-events: none;
+}
+
+.container img{
+    max-width: 30vh;
+    z-index: 100;
+}
+
+.about .container{
+    display: flex;
+}
+
+.about .container p{
+    color: white;
+}
+
+.contact{
+    background-color: black;
+    display: block;
+    text-align: center;
+    padding-top: 10vh;
+    padding-bottom: 40vh;
+    margin: auto;
+}
+
+.contact h1{
+    color: white;
+    font-size: 6em;
+    animation: text-appear-contact 1s forwards;
+    animation-timeline: view();
+    opacity: 0;
+    padding-bottom: 10vh;
+}
+
+.banner{
+    transform: translateY(-5em);
+    animation: contact-img-blur;
+    animation-timeline: view();
+    opacity: 0;
+    border: 0px solid white;
+}
+
+.contact p{
+    color: gray;
+    font-size: 1.5em;
+    transform: translateY(-5em);
+    font-weight: 300;
+    
+}
+
+.socials{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: radial-gradient(circle,rgb(253, 71, 10) 0%, rgba(0, 0, 0, 1) 65%);
+}
+
+.socials a{
+    padding:5px;
+}
+
+.social-icons img{
+    height: 5em;
+    width: 5em;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 20px;
+}
+
+.contact .socials .social-icons{
+    animation: upanddown 1s ease-in-out infinite;
+}
+.contact .socials .social-icons:hover{
+    animation: btn-shake 0.6s ease-in-out;
+}
+
+section {
+  position: relative;
+  z-index: 0;
+}
+
+section + section {
+  margin-top: -5px; 
+}
+
+section {
+  background-color: black;
+  margin: 0;
+}
+
+.footer{
+    color: white;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.contact-form-wrapper{
+    transform: translateY(-6em);
+    
+}
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    gap: 10px;
+    
+}
+
+.form-group input{
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 350px;
+    font-size: 1.2em;
+
+    
+}
+
+.form-group textarea{
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 750px;
+    resize: none; 
+    font-size: 1.2em;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px black inset !important; 
+  -webkit-text-fill-color: white !important;                 
+  caret-color: white;                                      
+}
+
+.message-area{
+    display: block;
+}
+
+.button-wrapper {
+    display: inline-block;
+    padding: 2px; 
+    border-radius: 8px;
+    background: linear-gradient(90deg,rgba(255, 73, 12, 1) 0%, rgba(0, 0, 0, 1) 30%);
+    transition: all 0.3s ease;
+    animation: pulse-shadow 3s infinite; 
+}
+
+.button-wrapper:hover {
+    background: linear-gradient(90deg,rgba(255, 73, 12, 1) 0%, rgba(255, 73, 12, 1) 100%);
+}
+
+.button-wrapper button {
+    display: flex;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2em;
+    box-shadow: 0 0 20px 0 rgba(255, 73, 12, 0.75);
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    width: 120px;
+    padding: 10px 5px 10px 20px;
+}
+
+.button-wrapper .arrow-icon{
+    transform: rotate(-45deg);
+    overflow: hidden;
+    align-items: center;
+}
+
+.arrow-icon {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+.button-wrapper button:hover .arrow-icon {
+    animation: arrow-fly 0.3s linear;
+}
+
+.projects-wrapper{
+    padding: 5em 20px 0px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    width: 100%;
+    margin: auto;
+    border: 0px solid green;
+    width: 90%;
+    max-width: 1500px;
+    margin-bottom: 30px;
+    transform: translateY(-20px);
+}
+
+.projects-wrapper .project-info .project-title{
+    font-size: 2.3em;
+    font-weight: 700;
+    text-align: left;
+}
+
+.projects-wrapper .project-info .project-desc{
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.project-info{
+    padding: 30px;
+    margin: auto;
+    background: linear-gradient(45deg, #ff5d06, #ff2701);
+    backdrop-filter: blur(5px);          
+    -webkit-backdrop-filter: blur(15px);   
+    border-radius: 20px;                 
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); 
+
+    opacity: 0;
+    transform: translateX(-200px);
+    animation: slideInLeft-projectinfo 5s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 20% cover 50%;
+    animation-delay: 0.5s;
+}
+
+.project-lang{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.project-lang p{
+    border: 3px solid #ff7b34;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 1.1em;
+}
+
+.live-code-btn, .source-btn{
+    color: white;
+    background-color: rgb(252, 97, 19);
+    font-size: 1.6em;
+    text-decoration: none;
+    border: 3px solid #ff7b34;
+    padding: 10px;
+    border-radius: 50px;
+    padding-left: 25px;
+    width: 220px;
+    display: inline-block;  
+    text-align: center;  
+    margin: 0 5px;
+}
+
+.live-code-btn img, .source-btn img{
+    vertical-align: middle;
+    margin-left: 6px;
+    margin-right: 10px;
+}
+
+.video-container{
+    opacity: 0;
+    transform: translateX(200px);
+    animation: slideInRight-video 5s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 20% cover 50%;
+    animation-delay: 0.7s;
+}
+
+.video-container video {
+    display: block;
+    border-radius: 20px;
+    background: rgb(255, 255, 255); 
+    backdrop-filter: blur(5px);          
+    -webkit-backdrop-filter: blur(15px);   
+    border-radius: 20px;                 
+    border: 1px solid rgba(255, 255, 255, 0.49); 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTC.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="responsive.css">
+     <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "-2uzdDsjSDqg8OcEH",
+        });
+    })();
+    </script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="timeline"></div>
+    <section class="hero" id="hero">
+        <nav>
+            <div class="burger">☰</div>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="description">
+        <p class="desc-animation1">I work with <span class="keyword">systems</span>,</p>
+        <p class="desc-animation2">build <span class="keyword">human+computer</span> interactions,</p> 
+        <p class="desc-animation3">and bringing <span class="keyword">ideas</span> to life.</p>
+    </section>
+
+    <section class="projects" id="projects">
+        <h1>Projects</h1>
+        <p>Things I’ve made trying to put my mark in the universe.</p>
+        <div class="projects-wrapper">
+            <div class="project-info">
+                <p class="project-title">Arrivea Taxi Booking Platform</p>
+                <p class="project-desc">A tech solution for taxi businesses with quick bookings, a user-friendly interface, and a dashboard. Tracks rides and drivers in real-time with visual performance metrics.</p>
+                <br>
+                <div class="project-lang">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JS</p>
+                    <p>PHP</p>
+                    <p>Google Maps API</p>
+                    <p>Chart.js</p>
+                </div>
+                
+                <a href="https://arrivea.infinityfreeapp.com/Arrivea-Taxi-Booking-Web-App-main/Arrivea/LandingPage/index.php" target="_blank" class="live-code-btn">Live preview  <img src="images/web.png" width="32px" height="32px"></a>
+                <a href="https://github.com/EssConcept/Arrivea-Taxi-Booking-Web-App" target="_blank" class="source-btn">Source  <img src="images/code.png" width="32px" height="32px"></a>
+            </div>
+            <div class="video-container"> <video src="videos/arrivea-video-finalcut.mp4" width="720" height="405" controls loop muted></video></div>
+        </div>
+        <p class="github"><a href="https://github.com/EssConcept" target="_blank">check out my other projects on <b>GitHub</b></a> </p>
+    </section>
+
+    <section class="about" id="about">
+        <h1>About me</h1> 
+        <div class="container">
+            <div class="container-wrapper">
+                <img src="images/avatar.png">
+                <p class="abme-desc">I’m <b>Esad Tabaković </b>- a passionate and creative individual! <br> <b>Computer Science</b> student based in Ljubljana. <br><br> I enjoy solving problems and turning ideas into functional, user-friendly solutions. Main focus is on <b>web/app development</b>. I’m continuously learning and expanding my skills, with the goal of becoming a well-rounded developer.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1>Let's Work Together</h1>
+        <img src="images/ctn-banner.jpg" class="banner">
+        
+            <p>Always open to new opportunities and collaborations-let’s connect.</p>
+            <br>
+        <div class="contact-form-wrapper">
+            <form onsubmit="sendEmail(event)">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                
+                <div class="form-group message-area">
+                    <textarea name="Message" id="message" rows="7" placeholder="Message" required></textarea>
+                    <br>
+                    <br>
+                    <div class="button-wrapper">
+                        <button type="submit">Send
+                            <img src="images/arrow.svg" class="arrow-icon">
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="socials">
+            <a href="https://github.com/EssConcept" class="social-icons" target="_blank"><img src="images/gh_icon.png" class="social-icons"></a>
+            <a href="https://www.linkedin.com/in/esad-tabakovi%C4%87-62845a249/" class="social-icons" target="_blank"><img src="images/li_icon.png" class="social-icons"></a>
+            <a href="https://www.instagram.com/estc369/" class="social-icons" target="_blank"><img src="images/ig_icon.png" class="social-icons"></a>
+        </div>
+    </section>
+
+    <section class="footer">
+        <p>© Esad Tabaković 2025</p>
+    </section>
+</body>
+</html>
