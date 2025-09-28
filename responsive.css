@@ -548,3 +548,39 @@
         width: 4em;
     }
 }
+
+@media (max-width:439px) {
+    .project-info {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .projects p{
+        font-size: 1em;
+        display: block;
+    }
+
+    .container{
+        max-width: 350px;
+        transform: translateY(-2.5em);
+    }
+
+    .about h1{
+        font-size: 4.4em;
+    }
+
+    .message-area textarea{
+        max-width: 300px;
+    }
+
+    .form-group input{
+        margin-bottom: 20px;
+        max-width: 300px;
+        color: white;
+    }
+    
+    .projects h1{
+        font-size: 4.5em;
+    }
+}
